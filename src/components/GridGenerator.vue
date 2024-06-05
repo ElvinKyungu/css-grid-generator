@@ -1,5 +1,6 @@
 <template>
-  <div class="p-6">
+  <div class="p-6 md:mx-20">
+    <h1 class="my-10 text-2xl">Grid CSS generator</h1>
     <div class="flex gap-4 mb-4">
       <div>
         <label for="rows" class="block text-sm font-medium text-gray-700">Nombre de lignes</label>
@@ -34,12 +35,12 @@
       </div> -->
 
       <div :style="gridStyle" class="mt-6 border">
-        <div v-for="(cell, index) in totalCells" :key="index" class="border w-full h-16"></div>
+        <div v-for="(cell, index) in totalCells" :key="index" class="border w-full h-16 border-gray-4 00"></div>
       </div>
 
       <button @click="toggleShowCode" class="mt-4 px-4 py-2 bg-gray-500 text-white rounded-md">Show me the code</button>
-      <pre v-if="showCode" class="mt-4 p-4 bg-gray-100 border rounded-md">
-        <code class="language-html">{{ code }}</code>
+      <pre v-if="showCode" class="mt-4 p-4 bg-gray-200 border rounded-md">
+<code class="language-html">{{ code }}</code>
       </pre>
     </div>
   </div>
